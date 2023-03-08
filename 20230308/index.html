@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <div v-if="seen0">a</div>
+      <div v-if="seen0">b</div>
+      <div v-if="seen0">c</div>
+      <div v-if="seen1">d</div>
+      <div v-if="seen1">e</div>
+      <div v-if="seen2">f</div>
+      <div v-if="seen2">g</div>
+      <button v-on:click="gogo">go</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.min.js"></script>
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data() {
+          return {
+            seen0: true,
+            seen1: false,
+            seen2: false,
+          };
+        },
+        i: 0,
+        methods: {
+          gogo() {
+            if (this.seen0 === true) {
+              this.seen0 = false;
+              this.seen1 = true;
+              this.seen2 = false;
+              return;
+            }
+            if (this.seen1 === true) {
+              this.seen0 = false;
+              this.seen1 = false;
+              this.seen2 = true;
+              return;
+            }
+            if (this.seen2 === true) {
+              this.seen2 = false;
+              this.seen1 = false;
+              this.seen0true;
+              return;
+            }
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

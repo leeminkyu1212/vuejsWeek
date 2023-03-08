@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="" id="app">
+
+      <!-- vue에서 데이터르 나타낼때 {{}} -->
+      {{message}}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.min.js"></script>
+    <script>
+      const app = new Vue({
+        //element 중에 id가 app인 것에 대해 적용
+
+        el: "#app",
+        data() {
+          return {
+            message: "Hello Vue",
+          };
+        },
+      });
+    </script>
+  </body>
+</html>
